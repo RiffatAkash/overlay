@@ -1,0 +1,216 @@
+.purple_wrapper * {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+.purple_wrapper img {
+  background: transparent !important;
+}
+#purple_image_overlay_section {
+  position: relative;
+}
+.purple_wrapper {
+  bottom: 0;
+  width: 728px;
+  height: 140px;
+  position: absolute;
+  background: url("asset/bg.png");
+  cursor: pointer;
+  background-size: 100% 120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  overflow-y: hidden;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.purple_slide {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.purple_slide_1 .creative_1 {
+  width: 137px;
+  height: 45px;
+  left: 6px;
+  bottom: 67px;
+  animation-delay: 0.5s;
+}
+.purple_slide_1 .creative_2 {
+  width: 218px;
+  height: 30px;
+  left: 22px;
+  bottom: 24px;
+}
+.purple_slide_1 .creative_3 {
+  width: 226px;
+  height: 114px;
+  left: 20px;
+  bottom: 0px;
+}
+
+.purple_slide_2 .creative_1 {
+  width: 193px;
+  height: 85px;
+  right: 280px;
+  bottom: 18px;
+  z-index: 99;
+}
+.purple_slide_2 .creative_2 {
+  width: 120px;
+  max-height: 120px;
+  right: 182px;
+  bottom: 0px;
+}
+
+.purple_slide_3 .creative_1 {
+  width: 90px;
+  height: 111px;
+  left: 0px;
+  right: 100PX;
+  margin: 0 auto;
+  bottom: 0px;
+  z-index: 99;
+}
+.purple_slide_3 .creative_2 {
+  width: 217px;
+  height: 114px;
+  right: 110px;
+  bottom: 0px;
+}
+
+.purple_slide_4 .creative_1 {
+  width: 121px;
+  height: 36px;
+  right: 41px;
+  bottom: 51px;
+}
+.purple_slide_4 .creative_2 {
+  width: 101x;
+  height: 101px;
+  right: 0px;
+  bottom: -1px;
+}
+
+.absolute {
+  position: absolute;
+}
+.hidden {
+  display: none;
+}
+
+@keyframes bottle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(-3deg);
+  }
+  20% {
+    transform: rotateZ(3deg);
+  }
+  30% {
+    transform: rotateZ(-3deg);
+  }
+  40% {
+    transform: rotateZ(3deg);
+  }
+  50% {
+    transform: rotateZ(-3deg);
+  }
+  60% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+.bottle {
+  animation: bottle 3s ease-in-out infinite;
+}
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scale3d(0.96, 0.96, 0.96);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+/*info css*/
+.purple_generic_icon {
+  position: absolute;
+  bottom: 51px;
+  right: 5px;
+  background: url("asset/info.svg") no-repeat;
+  background-size: 100% 100%;
+  width: 22px;
+  height: 22px;
+  -webkit-animation: fadeIn24 1s 0.4s both;
+  animation: fadeIn24 1s 0.4s both;
+  cursor: pointer;
+  margin: 0 !important;
+  z-index: 1;
+}
+.purple_generic_close {
+  position: absolute;
+  bottom: 80px;
+  right: 5px;
+  background: url("asset/close.svg") no-repeat;
+  background-size: 100% 100%;
+  width: 22px;
+  height: 22px;
+  -webkit-animation: fadeIn24 1s 0.4s both;
+  animation: fadeIn24 1s 0.4s both;
+  cursor: pointer;
+  margin: 0 !important;
+  z-index: 1;
+}
+@keyframes hideZoomOut {
+  100% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes showZoomIn {
+  from {
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes topBottom {
+  0%,
+  100% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.hideZoomOut {
+  animation-name: hideZoomOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+.showZoomIn {
+  animation-name: showZoomIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.topBottom {
+  animation-name: topBottom;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
