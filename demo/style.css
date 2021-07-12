@@ -1,0 +1,60 @@
+ /*
+Animation Name: Image Overlay
+Author: Lincoln Mahmud
+Create Date: 12 may 2021;
+*/
+.purple__wrapper *{margin: 0;padding: 0;user-select: none;}
+.purple__wrapper img{background: transparent !important;}
+.purple__wrapper .purple_slide img{max-width: 100%;max-height: 100%}
+.purple_slide_bg img{width:100%}
+#purple_image_overlay_section{position: relative;}
+.purple__wrapper {bottom:0; width: 728px;height: 120px;position: absolute;
+  cursor: pointer;left:0;right:0;margin:0 auto;overflow-y: hidden;background-position: bottom;background-repeat: no-repeat;}
+
+.purple_slide {top: 0;left: 0;right: 0;bottom: 0;}
+
+.purple_slide_bg .creative_1, .purple_slide_bg .creative_2{width: 100%;height: 100%;left: 0;bottom: 0;}
+.purple_slide_1 .creative_1 {width: 18%;height: 100%;right: 0%;bottom: 0%;}
+.purple_slide_1 .creative_1 img{float: right;}
+
+.purple_slide_2 .creative_1 {width: 17%;height: 100%;left: 2%;bottom: 0%;}
+.purple_slide_2 .creative_1_2 {width: 15%;height: 100%;left: 40%;bottom: 0%;}
+.purple_slide_2 .creative_2 {width: 32%;height: 95%;left: 1%;bottom: 0%;transform: translateY(50%);}
+.purple_slide_2 .creative_2_2 {width: 32%;height: 95%;left: 51%;bottom: 0%;transform: translateY(50%);}
+
+.purple_slide_3 .creative_1 {width: 21%;height: 61%;left: 17%;bottom: 30%;}
+.purple_slide_3 .creative_1_2 {width: 22%;height: 48%;right: 20%;bottom: 30%;}
+.purple_slide_3 .creative_2 {width: 13%;height: 93%;left: 35%;bottom: 0%;}
+
+.absolute{position: absolute;}
+.hidden {display: none;}
+
+.pulse { animation: pulse 2s ease-in-out infinite;}
+@keyframes pulse {
+  0% {transform: scaleX(1) scaleY(1)}
+  50% {transform: scale3d(.95, .95, .95)}
+  to {transform: scaleX(1) scaleY(1)}
+}
+@keyframes hideZoomOut {100% {opacity: 0;transform: scale3d(.3, .3, .3)}}
+@keyframes hideZoomOutBottom {100% {opacity: 0;transform: scale3d(.3, .3, .3) translateY(100%)}}
+@keyframes showZoomIn {
+    from {transform: scale3d(.5, .5, .5)}
+    to {transform: scale3d(1, 1, 1)}
+}
+@keyframes showZoomInBottom {
+    from {transform: scale3d(.5, .5, .5) translateY(50%)}
+    to {transform: scale3d(1, 1, 1)}
+}
+@keyframes topBottom {
+  0%,100% {transform: translateY(1px);}
+  50% {transform: translateY(-10px);}
+}
+.hideZoomOut {animation-name: hideZoomOut;animation-duration: .5s;animation-fill-mode: both; animation-iteration-count: 1}
+.hideZoomOutBottom {animation-name: hideZoomOutBottom;animation-duration: .5s;animation-fill-mode: both; animation-iteration-count: 1}
+.showZoomIn {animation-name: showZoomIn;animation-duration: .5s;animation-fill-mode: both}
+.showZoomInBottom {animation-name: showZoomInBottom;animation-duration: .5s;animation-fill-mode: both}
+.topBottom {animation-name: topBottom;animation-duration: 3s;animation-fill-mode: both;animation-iteration-count: infinite;}
+
+/*info css*/
+.purple_generic_icon {position: absolute;bottom: 51px;right: 5px;background: url('//ms.purplepatch.online/overlay/generic/info.svg') no-repeat;background-size: 100% 100%;width: 22px;height: 22px;-webkit-animation: fadeIn24 1s .4s both;animation: fadeIn24 1s .4s both;cursor: pointer;margin: 0!important;z-index: 1;}
+.purple_generic_close {position: absolute;bottom: 80px;right: 5px;background: url('//ms.purplepatch.online/overlay/generic/close.svg') no-repeat;background-size: 100% 100%;width: 22px;height: 22px;-webkit-animation: fadeIn24 1s .4s both;animation: fadeIn24 1s .4s both;cursor: pointer;margin: 0!important;z-index: 1;}
