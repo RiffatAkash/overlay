@@ -9,13 +9,12 @@ Create Date: 23 June 2021;
 .purple_slide_bg img{width:100%}
 #purple_image_overlay_section{position: relative;}
 .purple__wrapper { bottom:0; width: 320px;height: 70px;position: absolute; 
-  background: url('//ms.purplepatch.online/overlay/toffee-june-21/mobile/bg.png?v=1.1');
+  background: url('bg.png?v=1.1');
   cursor: pointer;background-size: 100% 70px;left:0;right:0;margin:0 auto;background-position: bottom;background-repeat: no-repeat;overflow: hidden;}
 
-.purple_slide_1 {width: 36%;height: 86%;left: 0%;bottom: 0%;}
-.purple_slide_2 {width: 15%;height: 85%;left: 33%;bottom: 9%;}
-.purple_slide_3 {width: 35%;height: 86%;right: 20%;bottom: 0%;}
-.purple_slide_4 {width: 20%;height: 86%;right: 0%;bottom: 0%;}
+.purple_slide_1 {width: 24%;height: 69%;left: 2%;bottom: 2%;}
+.purple_slide_2 {width: 50%;height: 48%;left: 27%;bottom: 3%;}
+.purple_slide_3 {width: 18%;height: 95%;right: 4%;bottom: 3%;}
 
 .absolute{position: absolute;}
 .hidden {display: none;}
@@ -40,6 +39,17 @@ Create Date: 23 June 2021;
   0%,100% {transform: translateY(0px);}
   50% {transform: translateY(6px);}
 }
+@keyframes bottle {
+  0% {transform: rotateZ(0deg)}
+  10% {transform: rotateZ(-3deg)}
+  20% {transform: rotateZ(3deg)}
+  30% {transform: rotateZ(-3deg)}
+  40% {transform: rotateZ(3deg)}
+  50% {transform: rotateZ(-3deg)}
+  60% {transform: rotateZ(0deg)}
+ 100% {transform: rotateZ(0deg) }
+}
+.bottle{animation: bottle 3s ease-in-out infinite;}
 .hideZoomOut {animation-name: hideZoomOut;animation-duration: .5s;animation-fill-mode: both; animation-iteration-count: 1}
 .hideZoomOutBottom {animation-name: hideZoomOutBottom;animation-duration: .5s;animation-fill-mode: both; animation-iteration-count: 1}
 .showZoomIn {animation-name: showZoomIn;animation-duration: .5s;animation-fill-mode: both}
